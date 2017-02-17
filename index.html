@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+    .view--one {
+      background-color: #ccc;
+    }
+
+    .view--two {
+      background-color: green;
+    }
+
+    .view--three {
+      background-color: pink;
+    }
+
+    .view--four {
+      background-color: #666;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <router-link to="/home">/home</router-link>
+      <router-link to="/other">/other</router-link>
+      <router-link to="/contact">/contact</router-link>
+      
+      <br>
+      <br>
+      
+      <router-view class="view--one"></router-view>
+      <router-view class="view--two" name="viewA"></router-view>
+      <router-view class="view--three" name="viewB"></router-view>
+      <br>
+      <br>
+      <router-view class="view--four" name="viewC"></router-view>
+    </div>
+    <script src="dist/index.bundle.js"></script>
+  </body>
+</html>
